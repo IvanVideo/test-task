@@ -1,20 +1,24 @@
 import React from 'react';
 import './App.css';
-// import SearchForm from '../SearchForm/SearchForm';
 import Header from '../Header/Header';
 import booksApi from '../../utils/api';
 import Main from '../Main/Main';
+import { useDispatch, useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators, State } from '../../store';
 
 
 function App() {
-  const [booksArr, setBooksArr] = React.useState([]);
-
-  // const store = createStore()
+  const dispatch = useDispatch();
+  const { getBooksArr } = bindActionCreators(actionCreators, dispatch);
+  const { changeStatus } = bindActionCreators(actionCreators, dispatch);
+  const books = useSelector((state: State) => state.booksArr);
 
   const getBooks = (data: String) => {
     booksApi.getBooks(data)
       .then((res) => {
-        setBooksArr(res)
+        // changeStatus(false);
+        getBooksArr(res);
       })
       .catch((err) => {
         console.log(err);
@@ -24,7 +28,7 @@ function App() {
   return (
     <div className="app">
       <Header getBooks={getBooks} />
-      <Main booksArr={booksArr} />
+      <Main booksArr={books} />
     </div>
   );
 }

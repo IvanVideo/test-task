@@ -1,38 +1,30 @@
 import './SearchForm.css';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { inputTypesSelector } from '../../hooks/inputTypesSelector';
-import { Dispatch } from 'redux';
-import { inputValueAction, inputValueActionTypes } from '../../types/input';
-import { type } from 'os';
+import { bindActionCreators } from 'redux';
+import { actionCreators, State } from '../../store';
 
 interface HeaderProps {
     getBooks: Function,
 }
 
 function SearchForm({ getBooks }: HeaderProps) {
-    const [inputValue, setInputValue] = React.useState('');
+    const dispatch = useDispatch();
+    const { getInputValue } = bindActionCreators(actionCreators, dispatch);
+    const { changeStatus } = bindActionCreators(actionCreators, dispatch);
+    const input = useSelector((state: State) => state.input);
+    const loader = useSelector((state: State) => state.loader);
 
-    // const state = inputTypesSelector(state => state.input)
-
-    // console.log(state, '1')
-    React.useEffect(() => {
-
-    }, [inputValue])
 
     const handleInputValue = (e: any) => {
-        setInputValue(e.target.value);
+        getInputValue(e.target.value);
     }
-
-    // const handleSubmitForm = (e: React.FormEvent, dispatch: Dispatch<inputValueAction>) => {
-    //     e.preventDefault();
-    //     dispatch({ type: inputValueActionTypes.INPUT_VALUE, payload: inputValue })
-    // }
 
     const handleSubmitForm = (e: React.FormEvent) => {
         e.preventDefault();
-        getBooks(inputValue);
-        // console.log(inputValue)
+        changeStatus(true);
+        getInputValue(input);
+        getBooks(loader);
     }
 
     return (

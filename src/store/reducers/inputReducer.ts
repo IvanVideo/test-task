@@ -1,13 +1,13 @@
-import { inputValueState, inputValueActionTypes, inputValueAction } from '../../types/input';
+import { type } from "os";
+import { ActionInput } from '../actions/index';
+import { ActionTypes } from '../types/index';
 
-const initialState: inputValueState = {
-    inputValue: '',
-}
+const initialState = ''
 
-export const inputReducer = (state = initialState, action: inputValueAction): inputValueState => {
+export const inputReducer = (state = initialState, action: ActionInput) => {
     switch (action.type) {
-        case inputValueActionTypes.INPUT_VALUE:
-            return { inputValue: action.payload }
+        case ActionTypes.INPUT_VALUE:
+            return action.payload
         default:
             return state
     }

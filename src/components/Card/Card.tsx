@@ -5,7 +5,7 @@ interface CardProps {
 }
 
 function Card({ card }: CardProps) {
-    console.log(card, 'что в карточке')
+
     return (
         <section className='card'>
             <img className='card__img' src={card.volumeInfo.imageLinks.thumbnail} />

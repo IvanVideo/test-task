@@ -39,6 +39,7 @@
 .form__box {
     display: flex;
     margin-right: 50px;
+    align-items: center;
 }
 
 .form__box:last-of-type {
@@ -58,4 +59,9 @@
     display: flex;
     justify-content: center;
     padding-top: 20px;
+}
+
+.form__select {
+    height: 25px;
+    width: 100px;
 }

@@ -1,24 +1,47 @@
 import React from 'react';
 import './Main.css';
 import Card from '../Card/Card';
-import { useEffect } from 'react';
+import Preloader from '../Preloader/Preloader';
+import { useDispatch, useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators, State } from '../../store';
 
 interface MainProps {
-    booksArr: Array<[]>,
+    booksArr: {
+        items: [],
+        kind: String,
+        totalItems: Number,
+        length: any,
+    }
 }
 
 function Main({ booksArr }: MainProps) {
-    console.log(booksArr, 'a0a00a')
+    const dispatch = useDispatch();
+    const { multiplyCount } = bindActionCreators(actionCreators, dispatch);
+    const count = useSelector((state: State) => state.count);
+    const loader = useSelector((state: State) => state.loader);
+
+    // <Preloader loader={loader} />
     return (
-        <section className='main'>
-            {
-                booksArr.items.map((item: Array<MainProps>) => (
-                    <Card
-                        card={item}
-                    />
-                ))
-            }
-        </section>
+        (
+            booksArr.length === 1 ?
+                null
+                :
+                <section className='main'>
+                    <div className='main__content'>
+                        {
+                            booksArr.items
+                                .slice(0, count)
+                                .map((item) => (
+                                    <Card
+                                        card={item}
+                                    />
+                                ))
+                        }
+                    </div>
+                    <button className='main__button' onClick={() => multiplyCount(30)}>Еще</button>
+                </section>
+        )
     );
 }
 

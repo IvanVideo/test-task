@@ -1,7 +1,6 @@
-import { applyMiddleware, createStore } from "redux";
-import thunk from "redux-thunk";
-import { rootReducer } from "./reducers";
 
 
 
-export const store = createStore(rootReducer, applyMiddleware(thunk))
+export * as actionCreators from './action-creators';
+export * from './store';
+export * from './reducers/index';

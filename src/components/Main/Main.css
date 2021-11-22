@@ -1,8 +1,18 @@
 .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__content {
     max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.main__button {
+    width: 100px;
+    height: 30px;
 }

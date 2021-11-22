@@ -7,7 +7,7 @@ class Api {
     }
 
     getBooks(value: String) {
-        return fetch(`${this.baseUrl}`+value+`&key=${this.apiKey}`, {
+        return fetch(`${this.baseUrl}`+value+`&maxResults=40&key=${this.apiKey}`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",

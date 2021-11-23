@@ -36,6 +36,10 @@
     top: 40px;
 }
 
+.form__button:hover {
+    cursor: pointer;
+}
+
 .form__box {
     display: flex;
     margin-right: 50px;

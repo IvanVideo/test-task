@@ -4,6 +4,7 @@ import { ActionInput } from "../actions/index";
 import { ActionBook } from "../actions/index";
 import { ActionCount } from "../actions/index";
 import { ActionLoader } from "../actions/index";
+import { ActionCategories } from "../actions/index";
 
 export const getInputValue = (amount: String) => {
     return (dispatch: Dispatch<ActionInput>) => {
@@ -36,6 +37,15 @@ export const changeStatus = (amount: Boolean) => {
     return (dispatch: Dispatch<ActionLoader>) => {
         dispatch({
             type: ActionTypes.LOADER,
+            payload: amount
+        })
+    }
+}
+
+export const changeCategories = (amount: String) => {
+    return (dispatch: Dispatch<ActionCategories>) => {
+        dispatch({
+            type: ActionTypes.CATEGORIES,
             payload: amount
         })
     }

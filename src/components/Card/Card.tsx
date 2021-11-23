@@ -1,7 +1,7 @@
 import './Card.css';
 
 interface CardProps {
-    card: any,
+    card: any
 }
 
 function Card({ card }: CardProps) {

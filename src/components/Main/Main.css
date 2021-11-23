@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 .main__content {
@@ -14,5 +15,19 @@
 
 .main__button {
     width: 100px;
-    height: 30px;
+    height: 52px;
+    margin-top: 20px;
+    border: none;
+    background: #3456F3;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Inter', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.main__button:hover {
+    cursor: pointer;
 }

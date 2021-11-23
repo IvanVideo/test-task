@@ -26,8 +26,14 @@ interface LoaderValue {
     payload: Boolean
 }
 
+interface CategoriesValue {
+    type: ActionTypes.CATEGORIES
+    payload: String
+}
+
 export type ActionInput = InputValue
 export type ActionBook = BooksArray
 export type ActionCount = CountValue
 export type ActionLoader = LoaderValue
+export type ActionCategories = CategoriesValue
 

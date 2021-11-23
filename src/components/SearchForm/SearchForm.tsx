@@ -11,7 +11,8 @@ interface HeaderProps {
 function SearchForm({ getBooks }: HeaderProps) {
     const dispatch = useDispatch();
     const { getInputValue } = bindActionCreators(actionCreators, dispatch);
-    const { changeStatus } = bindActionCreators(actionCreators, dispatch);
+  const { changeStatus } = bindActionCreators(actionCreators, dispatch);
+  const { changeCategories } = bindActionCreators(actionCreators, dispatch);
     const input = useSelector((state: State) => state.input);
     const loader = useSelector((state: State) => state.loader);
 
@@ -27,6 +28,13 @@ function SearchForm({ getBooks }: HeaderProps) {
         getBooks(loader);
     }
 
+    const handleChangeCategories = () => {
+        const status = (document.querySelector('.form__select') as HTMLSelectElement).value;
+        changeCategories(status);
+        console.log(status, 'поменял');
+
+    }
+
     return (
         <form className='form' onSubmit={handleSubmitForm}>
             <input className="form__input" placeholder="Книги" onChange={handleInputValue} />
@@ -34,7 +42,7 @@ function SearchForm({ getBooks }: HeaderProps) {
             <div className='form__column'>
                 <div className='form__box'>
                     <p className='form__text'>Categories</p>
-                    <select className='form__select'>
+                    <select className='form__select' onChange={handleChangeCategories} >
                         <option>all</option>
                         <option>art</option>
                         <option>biography</option>

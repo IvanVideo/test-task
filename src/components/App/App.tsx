@@ -3,10 +3,11 @@ import './App.css';
 import Header from '../Header/Header';
 import booksApi from '../../utils/api';
 import Main from '../Main/Main';
+import BookPage from '../BookPage/BookPage';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators, State } from '../../store';
-
+import { Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,12 @@ function App() {
     <div className="app">
       <Header getBooks={getBooks} />
       <Main booksArr={books} />
+      <Routes>
+        <Route
+          path="/book"
+          element={<BookPage />}
+        />
+      </Routes>
     </div>
   );
 }

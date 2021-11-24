@@ -11,11 +11,10 @@ interface HeaderProps {
 function SearchForm({ getBooks }: HeaderProps) {
     const dispatch = useDispatch();
     const { getInputValue } = bindActionCreators(actionCreators, dispatch);
-  const { changeStatus } = bindActionCreators(actionCreators, dispatch);
-  const { changeCategories } = bindActionCreators(actionCreators, dispatch);
+    const { changeStatus } = bindActionCreators(actionCreators, dispatch);
+    const { changeCategories } = bindActionCreators(actionCreators, dispatch);
     const input = useSelector((state: State) => state.input);
     const loader = useSelector((state: State) => state.loader);
-
 
     const handleInputValue = (e: any) => {
         getInputValue(e.target.value);
@@ -31,8 +30,6 @@ function SearchForm({ getBooks }: HeaderProps) {
     const handleChangeCategories = () => {
         const status = (document.querySelector('.form__select') as HTMLSelectElement).value;
         changeCategories(status);
-        console.log(status, 'поменял');
-
     }
 
     return (

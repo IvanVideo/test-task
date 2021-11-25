@@ -16,7 +16,6 @@ function App() {
   const loader = useSelector((state: State) => state.loader);
 
   const getBooks = (data: String) => {
-    console.log(data, '01001')
     booksApi.getBooks(data)
       .then((res) => {
         changeStatus(false);

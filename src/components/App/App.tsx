@@ -1,25 +1,25 @@
-import React from 'react';
 import './App.css';
-import Header from '../Header/Header';
 import booksApi from '../../utils/api';
+import Header from '../Header/Header';
 import Main from '../Main/Main';
 import BookPage from '../BookPage/BookPage';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators, State } from '../../store';
-import { Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
   const { getBooksArr } = bindActionCreators(actionCreators, dispatch);
   const { changeStatus } = bindActionCreators(actionCreators, dispatch);
   const books = useSelector((state: State) => state.booksArr);
+  const loader = useSelector((state: State) => state.loader);
 
   const getBooks = (data: String) => {
+    console.log(data, '01001')
     booksApi.getBooks(data)
       .then((res) => {
-        // changeStatus(false);
-        console.log(res, 'получил с сервера')
+        changeStatus(false);
         getBooksArr(res);
       })
       .catch((err) => {

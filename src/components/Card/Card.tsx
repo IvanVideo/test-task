@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { actionCreators, State } from '../../store';
+import { useDispatch } from 'react-redux';
+import { actionCreators } from '../../store';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import './Card.css';
@@ -11,7 +11,7 @@ interface CardProps {
 function Card({ card }: CardProps) {
     const dispatch = useDispatch();
     const { getBookArr } = bindActionCreators(actionCreators, dispatch);
-    console.log(card, 'записываю')
+
     return (
         <Link 
         to='/book'

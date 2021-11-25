@@ -22,7 +22,7 @@ function SearchForm({ getBooks }: HeaderProps) {
 
     const handleSubmitForm = (e: React.FormEvent) => {
         e.preventDefault();
-        changeStatus(true);
+        changeStatus(true)
         getInputValue(input);
         getBooks(loader);
     }

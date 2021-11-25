@@ -5,6 +5,8 @@ import { ActionBook } from "../actions/index";
 import { ActionCount } from "../actions/index";
 import { ActionLoader } from "../actions/index";
 import { ActionCategories } from "../actions/index";
+import { ActionBookPage } from "../actions/index";
+
 
 export const getInputValue = (amount: String) => {
     return (dispatch: Dispatch<ActionInput>) => {
@@ -46,6 +48,15 @@ export const changeCategories = (amount: String) => {
     return (dispatch: Dispatch<ActionCategories>) => {
         dispatch({
             type: ActionTypes.CATEGORIES,
+            payload: amount
+        })
+    }
+}
+
+export const getBookArr = (amount: any) => {
+    return (dispatch: Dispatch<ActionBookPage>) => {
+        dispatch({
+            type: ActionTypes.BOOK_PAGE,
             payload: amount
         })
     }

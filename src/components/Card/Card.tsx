@@ -1,3 +1,6 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { actionCreators, State } from '../../store';
+import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import './Card.css';
 
@@ -6,9 +9,14 @@ interface CardProps {
 }
 
 function Card({ card }: CardProps) {
-
+    const dispatch = useDispatch();
+    const { getBookArr } = bindActionCreators(actionCreators, dispatch);
+    console.log(card, 'записываю')
     return (
-        <Link to='/book'>
+        <Link 
+        to='/book'
+            onClick={() => {getBookArr(card)}}
+            >
             <section className='card'>
                 <img className='card__img' src={card.volumeInfo.imageLinks.thumbnail} />
                 <p className='card__category card-text'>{card.volumeInfo.categories}</p>

@@ -1,0 +1,55 @@
+.bookPage {
+    width: 100wh;
+    height: 100vh;
+    background-color: rgb(199, 211, 233);
+}
+
+.bookPage__conteiner {
+    width: 90%;
+    height: 100%;
+    padding-top: 100px;
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.bookPage__img {
+    height: 600px;
+}
+
+.bookPage__category {
+    font-family: 'Inter', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.bookPage__name {
+    font-family: 'Inter', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 54px;
+}
+
+.bookPage__autor {
+    font-family: 'Inter', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.bookPage__box {
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.bookPage__description {
+    font-family: 'Inter', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+}

@@ -4,6 +4,7 @@ import { booksReducer } from './booksReducer';
 import { countReducer } from './countOfRenderReducer';
 import { loaderReducer } from './loaderReducer';
 import { categoriesReducer } from './categoriesOfBooksReducer';
+import { bookReducer } from './bookReducer';
 
 
 export const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ export const rootReducer = combineReducers({
     count: countReducer,
     loader: loaderReducer,
     categories: categoriesReducer,
+    book: bookReducer,
 })
 
 export default rootReducer;

@@ -19,6 +19,7 @@ function App() {
     booksApi.getBooks(data)
       .then((res) => {
         // changeStatus(false);
+        console.log(res, 'получил с сервера')
         getBooksArr(res);
       })
       .catch((err) => {
@@ -28,13 +29,10 @@ function App() {
 
   return (
     <div className="app">
-      <Header getBooks={getBooks} />
-      <Main booksArr={books} />
       <Routes>
-        <Route
-          path="/book"
-          element={<BookPage />}
-        />
+        <Route path='/' element={<><Header getBooks={getBooks} /><Main booksArr={books} /></>}>
+        </Route>
+        <Route path="/book" element={<BookPage />} />
       </Routes>
     </div>
   );

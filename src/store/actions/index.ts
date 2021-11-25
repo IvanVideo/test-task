@@ -31,9 +31,16 @@ interface CategoriesValue {
     payload: String
 }
 
+interface BookValue {
+    type: ActionTypes.BOOK_PAGE
+    payload: any
+}
+
 export type ActionInput = InputValue
 export type ActionBook = BooksArray
 export type ActionCount = CountValue
 export type ActionLoader = LoaderValue
 export type ActionCategories = CategoriesValue
+export type ActionBookPage = BookValue
+
 

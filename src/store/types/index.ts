@@ -4,4 +4,5 @@ export enum ActionTypes {
     COUNT_OF_RENDER = 'count',
     LOADER = 'loader',
     CATEGORIES = 'categories',
+    BOOK_PAGE = 'book',
 }

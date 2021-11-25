@@ -26,8 +26,6 @@ function Main({ booksArr }: MainProps) {
     const count = useSelector((state: State) => state.count);
     const loader = useSelector((state: State) => state.loader);
     const categories = useSelector((state: State) => state.categories);
-    console.log(categories)
-
 
     // <Preloader loader={loader} />
 

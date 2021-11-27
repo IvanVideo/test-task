@@ -36,6 +36,7 @@ function SearchForm({ getBooks }: HeaderProps) {
         <form className='form' onSubmit={handleSubmitForm}>
             <input className="form__input" placeholder="Книги" onChange={handleInputValue} />
             <input className="form__button" type="submit" value="Поиск" />
+            
             {/* <div className='form__column'>
                 <div className='form__box'>
                     <p className='form__text'>Categories</p>

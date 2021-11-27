@@ -69,3 +69,9 @@
     height: 25px;
     width: 100px;
 }
+
+@media (max-width: 767px) {
+    .form {
+        width: calc(100% - 30px);
+    }
+}

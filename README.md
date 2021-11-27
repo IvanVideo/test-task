@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# Google Books API
+### тестовое задание 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***Cтек технологий проекта***  
+![React](https://img.shields.io/badge/-React-cae3fa?style=for-the-badge&logo=node.js@logoColor=00eeff) ![TypeScript](https://img.shields.io/badge/-TypeScript-cae3fa?style=for-the-badge&logo=javascript@logoColor=00eeff) ![Redux](https://img.shields.io/badge/-Redux-cae3fa?style=for-the-badge&logo=react@logoColor=00eeff) 
 
-## Available Scripts
+Данное SPA является сервисом по поиску книг в базе Google Books. В целях изучения технологий TypeScript и Redux было решено использовать их. Все состояния управляются спомощью библиотеки Redux.
 
-In the project directory, you can run:
+## Техническое описание проекта
 
-### `npm start`
+- Приложение построенно спомощью библиотеки React с использованием типизатора TypeScript
+- Управление состояний стейтов осуществляется с помощью Redux
+- Верстка адаптирована под мобильное разрешение(от 320px)
+- Пока выполняется запрос на бэк, пользователю отображается крутящий прелоадер
+- Реализована пагинация данных. Шаг пагинации 30 книг 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
+###### Основная страница 
+![](https://sun9-22.userapi.com/impg/qAD1MBiBIMAazRqmOaWkQwT6EAKnlh0Audskxw/AtbZu9T2f_0.jpg?size=2304x1234&quality=95&sign=e79e77a09bf8cdddd4747895c97a71de&type=album)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+###### Результат запроса 
+![](https://sun9-20.userapi.com/impg/VZ4GtZ5JAA_IF0pXfbATKjTCVGYejFcuRk1Ung/JLOrJrCM5iw.jpg?size=2212x1212&quality=95&sign=6edc895dda731313755a5c6975a42246&type=album)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+###### Переход на страницу книги, с описанием 
+![](https://sun9-66.userapi.com/impg/24M15iRMLvq4Q394WFtvbngJvMaxIINR_fpdbA/X3jrZJr9tY8.jpg?size=2424x1178&quality=95&sign=a6bedfbf2c972acc9a3a6df2f2fd4868&type=album)

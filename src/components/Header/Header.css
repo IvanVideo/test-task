@@ -21,3 +21,15 @@
     font-size: 26px;
     line-height: 35px;
 }
+
+@media (max-width: 767px) {
+    .header__title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .header__subtitle {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

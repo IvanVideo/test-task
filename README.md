@@ -4,8 +4,7 @@
 ***Cтек технологий проекта***  
 ![React](https://img.shields.io/badge/-React-cae3fa?style=for-the-badge&logo=node.js@logoColor=00eeff) ![TypeScript](https://img.shields.io/badge/-TypeScript-cae3fa?style=for-the-badge&logo=javascript@logoColor=00eeff) ![Redux](https://img.shields.io/badge/-Redux-cae3fa?style=for-the-badge&logo=react@logoColor=00eeff) 
 
-Данное SPA является сервисом по поиску книг в базе Google Books. В целях изучения технологий TypeScript и Redux было решено использовать их. Все состояния управляются спомощью библиотеки Redux.
-
+Данное SPA является сервисом по поиску книг в базе Google Books. В целях изучения технологий TypeScript и Redux было решено использовать их.
 ## Техническое описание проекта
 
 - Приложение построенно спомощью библиотеки React с использованием типизатора TypeScript

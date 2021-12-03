@@ -18,12 +18,9 @@ function App() {
     booksApi.getBooks(data)
       .then((res) => {
         let newesBook = res.items;
-        console.log(newesBook, '1')
       let newad = newesBook.sort(function(a: { volumeInfo: { publishedDate: number; }; }, b: { volumeInfo: { publishedDate: number; }; }){
           return a.volumeInfo.publishedDate - b.volumeInfo.publishedDate;
       })
-      console.log(newad, '2')
-
         // console.log(newesBook.forEach((item: { volumeInfo: { publishedDate: any; }; }) => console.log(item.volumeInfo.publishedDate)), 'res')
         // let booksArtArr = res.items.filter((item: any) => item.volumeInfo.categories.includes("Juvenile Fiction"));
         // console.log(booksArtArr, 'art')

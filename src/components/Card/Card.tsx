@@ -13,10 +13,10 @@ function Card({ card }: CardProps) {
     const { getBookArr } = bindActionCreators(actionCreators, dispatch);
 
     return (
-        <Link 
-        to='/book'
-            onClick={() => {getBookArr(card)}}
-            >
+        <Link
+            to='/book'
+            onClick={() => { getBookArr(card) }}
+        >
             <section className='card'>
                 <img className='card__img' src={card.volumeInfo.imageLinks.thumbnail} alt='book' />
                 <p className='card__category card-text'>{card.volumeInfo.categories}</p>

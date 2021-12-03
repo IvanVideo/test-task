@@ -1,5 +1,5 @@
 import './SearchForm.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators, State } from '../../store';
@@ -13,7 +13,6 @@ function SearchForm({ getBooks }: HeaderProps) {
     const { getInputValue } = bindActionCreators(actionCreators, dispatch);
     const { changeStatus } = bindActionCreators(actionCreators, dispatch);
     const input = useSelector((state: State) => state.input);
-    const loader = useSelector((state: State) => state.loader);
 
     const handleInputValue = (e: any) => {
         getInputValue(e.target.value);
@@ -22,8 +21,7 @@ function SearchForm({ getBooks }: HeaderProps) {
     const handleSubmitForm = (e: React.FormEvent) => {
         e.preventDefault();
         changeStatus(true)
-        getInputValue(input);
-        getBooks(loader);
+        getBooks(input);
     }
 
     return (

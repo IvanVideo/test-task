@@ -1,4 +1,3 @@
-import { type } from "os";
 import { ActionCategories } from '../actions/index';
 import { ActionTypes } from '../types/index';
 

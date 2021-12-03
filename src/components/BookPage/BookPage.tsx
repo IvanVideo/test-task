@@ -11,7 +11,7 @@ const BookPage = () => {
         <section className='bookPage'>
             <div className='bookPage__conteiner'>
                 <div className='bookPage__content'>
-                    <img className='bookPage__img' src={book.volumeInfo.imageLinks.thumbnail} />
+                    <img className='bookPage__img' src={book.volumeInfo.imageLinks.thumbnail} alt='book' />
                     <div className='bookPage__box'>
                         <p className='bookPage__category card-text'>{book.volumeInfo.categories}</p>
                         <h3 className='bookPage__name card-text'>{book.volumeInfo.title}</h3>

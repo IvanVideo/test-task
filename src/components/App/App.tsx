@@ -13,7 +13,6 @@ function App() {
   const { getBooksArr } = bindActionCreators(actionCreators, dispatch);
   const { changeStatus } = bindActionCreators(actionCreators, dispatch);
   const books = useSelector((state: State) => state.booksArr);
-  const loader = useSelector((state: State) => state.loader);
 
   const getBooks = (data: String) => {
     booksApi.getBooks(data)

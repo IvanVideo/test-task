@@ -1,4 +1,3 @@
-import { type } from "os";
 import { ActionLoader } from '../actions/index';
 import { ActionTypes } from '../types/index';
 

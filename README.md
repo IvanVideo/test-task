@@ -1,5 +1,6 @@
 # Google Books API
-### тестовое задание 
+### тестовое задание
+ссылка на работу https://ivanvideo.github.io/test-task/
 
 ***Cтек технологий проекта***  
 ![React](https://img.shields.io/badge/-React-cae3fa?style=for-the-badge&logo=node.js@logoColor=00eeff) ![TypeScript](https://img.shields.io/badge/-TypeScript-cae3fa?style=for-the-badge&logo=javascript@logoColor=00eeff) ![Redux](https://img.shields.io/badge/-Redux-cae3fa?style=for-the-badge&logo=react@logoColor=00eeff) 
